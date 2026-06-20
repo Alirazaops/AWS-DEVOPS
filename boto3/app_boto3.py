@@ -1,7 +1,7 @@
 import boto3
 from pprint import pprint
 
-client = boto3.client('ec2', region_name='us-east-1')
+client = boto3.client('ec2', region_name='us-west-2')
 response = client.run_instances(
         ImageId='ami-0521cb2d60cfbb1a6',
         InstanceType='t2.micro',
