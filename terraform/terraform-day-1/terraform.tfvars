@@ -1,0 +1,6 @@
+cidr_block = "10.1.0.0/16" 
+tag = "VPC for production environment"
+cidr_block_prd_2 = "10.1.0.0/16"
+tag_prd_2 = "VPC for development environment"
+cidr_block_subnet = "10.1.0.0/24"
+cidr_block_subnet_tag = "My_Subnet"
