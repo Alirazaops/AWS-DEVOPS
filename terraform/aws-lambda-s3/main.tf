@@ -24,6 +24,12 @@ resource "aws_iam_role_policy_attachment" "lambda_policy" {
   
 }
 
+data "archive_file" "lambda_zip_1" {
+  type        = "zip"
+  source_file = "lambda_function.py"
+  output_path = "lambda_function.zip"
+}
+
 resource "aws_s3_bucket" "lambda_bucket" {
   bucket = "my-lambda-bucket-aatika"
 }
@@ -31,8 +37,9 @@ resource "aws_s3_bucket" "lambda_bucket" {
 resource "aws_s3_object" "lambda_zip" {
     bucket = aws_s3_bucket.lambda_bucket.id
     key = "lambda_function.zip" 
-    source = "lambda_function.zip"
-    etag = filemd5("lambda_function.zip") 
+    source = data.archive_file.lambda_zip_1.output_path
+    etag = filemd5(data.archive_file.lambda_zip_1.output_path) 
+    #data.archive_file.lambda_zip_1.output_path
 }
 
 resource "aws_lambda_function" "prd_lambda_function" {
