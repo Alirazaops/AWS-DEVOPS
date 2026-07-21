@@ -1,0 +1,27 @@
+aws_instance.prd_ec2: Destroying... [id=i-0b35b304acc817821]
+aws_instance.prd_ec2: Still destroying... [id=i-0b35b304acc817821, 00m10s elapsed]
+aws_instance.prd_ec2: Still destroying... [id=i-0b35b304acc817821, 00m20s elapsed]
+aws_instance.prd_ec2: Still destroying... [id=i-0b35b304acc817821, 00m30s elapsed]
+aws_instance.prd_ec2: Still destroying... [id=i-0b35b304acc817821, 00m40s elapsed]
+aws_instance.prd_ec2: Destruction complete after 43s
+aws_instance.prd_ec2: Creating...
+aws_instance.prd_ec2: Still creating... [00m10s elapsed]
+aws_instance.prd_ec2: Still creating... [00m20s elapsed]
+aws_instance.prd_ec2: Still creating... [00m30s elapsed]
+aws_instance.prd_ec2: Provisioning with 'file'...
+aws_instance.prd_ec2: Still creating... [00m40s elapsed]
+aws_instance.prd_ec2: Provisioning with 'local-exec'...
+aws_instance.prd_ec2 (local-exec): Executing: ["/bin/sh" "-c" "touch file500"]
+aws_instance.prd_ec2: Provisioning with 'remote-exec'...
+aws_instance.prd_ec2 (remote-exec): Connecting to remote host via SSH...
+aws_instance.prd_ec2 (remote-exec):   Host: 16.146.101.159
+aws_instance.prd_ec2 (remote-exec):   User: ec2-user
+aws_instance.prd_ec2 (remote-exec):   Password: false
+aws_instance.prd_ec2 (remote-exec):   Private key: true
+aws_instance.prd_ec2 (remote-exec):   Certificate: false
+aws_instance.prd_ec2 (remote-exec):   SSH Agent: true
+aws_instance.prd_ec2 (remote-exec):   Checking Host Key: false
+aws_instance.prd_ec2 (remote-exec):   Target Platform: unix
+aws_instance.prd_ec2 (remote-exec): Connected!
+aws_instance.prd_ec2: Still creating... [00m50s elapsed]
+aws_instance.prd_ec2: Creation complete after 50s [id=i-06d2ac95340867e61]
